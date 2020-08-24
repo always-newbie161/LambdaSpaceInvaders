@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="root" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.lambda.Controller">
+   <children>
+      <Pane fx:id="menuPane" prefHeight="23.0" prefWidth="800.0" />
+      <HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="800.0">
+         <children>
+            <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="677.0" prefWidth="600.0">
+               <children>
+                  <Pane maxHeight="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="27.0" prefWidth="600.0" style="-fx-background-color: #A9EEE6;">
+                     <children>
+                        <ImageView fitHeight="23.0" fitWidth="203.0" layoutX="199.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../../Rimages/title2.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="ground" layoutX="300.0" layoutY="300.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="600.0" prefWidth="600.0">
+                     <children>
+                        <ImageView fitHeight="70.0" fitWidth="600.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../Rimages/bluefire4.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="70.0" fitWidth="600.0" layoutY="503.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../Rimages/redfire.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="l2ig" fitHeight="100.0" fitWidth="300.0" layoutX="150.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../Rimages/level-2.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="l3ig" fitHeight="100.0" fitWidth="300.0" layoutX="150.0" layoutY="97.0" pickOnBounds="true" preserveRatio="true" visible="false">
+                           <image>
+                              <Image url="@../../../Rimages/level-3.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="base" fitHeight="27.0" fitWidth="600.0" layoutY="573.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@../../../Rimages/base.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="dracarys" cache="true" fitHeight="300.0" fitWidth="350.0" layoutX="140.0" layoutY="195.0" pickOnBounds="true" visible="false">
+                           <image>
+                              <Image url="@../../../Rimages/fire.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fx:id="wdracarys" fitHeight="300.0" fitWidth="350.0" layoutX="145.0" layoutY="14.0" pickOnBounds="true" visible="false">
+                           <image>
+                              <Image url="@../../../Rimages/bfire.png" />
+                           </image>
+                           <effect>
+                              <ColorAdjust brightness="-0.02" hue="-1.0" saturation="0.29" />
+                           </effect>
+                        </ImageView>
+                     </children>
+                  </Pane>
+                  <HBox fx:id="bottomBar" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="600.0" style="-fx-background-color: #fbd844ef;">
+                     <children>
+                        <Region prefHeight="50.0" prefWidth="102.0" />
+                        <Pane prefHeight="50.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="21.0" fitWidth="73.0" layoutX="14.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Rimages/scoree2.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label fx:id="scoreboard" alignment="CENTER" prefHeight="50.0" prefWidth="62.0" text="0" textFill="#2a2a57">
+                           <font>
+                              <Font name="SansSerif Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="50.0" prefWidth="100.0">
+                           <children>
+                              <ImageView fitHeight="21.0" fitWidth="73.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Rimages/level3.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </Pane>
+                        <Label fx:id="level" alignment="CENTER" prefHeight="50.0" prefWidth="62.0" text="0">
+                           <font>
+                              <Font name="SansSerif Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Pane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fx:id="drogon" fitHeight="123.0" fitWidth="95.0" layoutX="52.0" layoutY="-36.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../Rimages/drogon.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Pane fx:id="sidebar" prefHeight="677.0" prefWidth="200.0" style="-fx-border-width: 0; -fx-background-color: #303030;">
+               <children>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="1.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../Rimages/bluepunch.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" layoutY="527.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../../Rimages/redpunch.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fx:id="present" fitHeight="50.0" fitWidth="50.0" layoutX="27.0" layoutY="282.0" pickOnBounds="true" />
+                  <Rectangle fx:id="fullbar" arcHeight="5.0" arcWidth="5.0" fill="#e8e5da" height="20.0" layoutX="95.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" width="95.0" />
+                  <Rectangle fx:id="knightbar" arcHeight="5.0" arcWidth="5.0" fill="#e3703bf0" height="20.0" layoutX="95.0" layoutY="299.0" stroke="BLACK" strokeType="INSIDE" width="95.0" />
+                  <Label layoutX="14.0" layoutY="406.0" text="Next:" textFill="#a9eee6">
+                     <font>
+                        <Font name="SansSerif Bold" size="25.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="next" fitHeight="50.0" fitWidth="50.0" layoutX="101.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true" />
+                  <Circle fill="#2e2e2e00" layoutX="52.0" layoutY="309.0" radius="31.0" stroke="#e3703b" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Circle fill="#2e2e2e00" layoutX="126.0" layoutY="421.0" radius="31.0" stroke="#e3703b" strokeType="INSIDE" strokeWidth="2.0" />
+               </children>
+            </Pane>
+         </children>
+      </HBox>
+   </children>
+</VBox>

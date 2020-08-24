@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane fx:id="homeroot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: #000000;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.project.lambda.Controller">
+   <children>
+      <ImageView fx:id="nking" fitHeight="700.0" fitWidth="237.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../Rimages/homepic1.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="43.0" fitWidth="362.0" layoutX="424.0" layoutY="80.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../../Rimages/generatedtext2.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="start" alignment="CENTER" layoutX="483.0" layoutY="251.0" prefHeight="35.0" prefWidth="244.0" style="-fx-border-color: #087194; -fx-border-width: 3; -fx-border-radius: 15;" text="Start the Battle" textFill="#087194">
+         <font>
+            <Font name="SansSerif" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="exit" alignment="CENTER" layoutX="483.0" layoutY="413.0" prefHeight="35.0" prefWidth="244.0" style="-fx-border-color: #087194; -fx-border-width: 3; -fx-border-radius: 15;" text="Exit" textFill="#087194">
+         <font>
+            <Font name="SansSerif" size="22.0" />
+         </font>
+      </Label>
+      <Label fx:id="about" alignment="CENTER" layoutX="483.0" layoutY="333.0" prefHeight="35.0" prefWidth="244.0" style="-fx-border-color: #087194; -fx-border-width: 3; -fx-border-radius: 15;" text="About the Battle" textFill="#087194">
+         <font>
+            <Font name="SansSerif" size="22.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
