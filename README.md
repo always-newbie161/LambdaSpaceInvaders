@@ -1,6 +1,6 @@
 The Long Night Game
 ===================
-This project is a **desktop application** game named “Long Night” which is a clone to the vintage **Space Invaders** with a different theme.It is made using **Java Programming language** by using **JavaFX** library.
+This project is a **desktop application** game named “Long Night” which is like a clone to the vintage **Space Invaders** with a different theme.It is made using **Java Programming language** by using **JavaFX** library.
 
 It’s a battle between **United knights** and the **dangerous wights.** The wights lead by **Nightking** tries to invade the whole Westeros(the humans land).
 
@@ -38,6 +38,8 @@ but it can be used only limited times and the **dead army(wights)** also has a *
 The motive of the game is to **defend Westeros** from the dead army using the knights.
 
 
+[This is the user interface of the game](https://drive.google.com/file/d/107SGAGzmuVCfV3Cuaw6x0rvqkXW2LPxd/view?usp=sharing)
+
 
 ----------
 Running the Game
@@ -62,15 +64,20 @@ Without running the program we can directly run the jar file of the program and 
 ----------
 Built With
 -------------------
-**Intellij IDEA** - Development environment used
-**JavaFX**  - Library and Software Platform used.
-**Gluon Scenebuilder**- Layout tool used to design the UI.
+
+ - **Intellij IDEA** - Development environment used
+ 
+ - **JavaFX**  - Library and Software Platform used.
+
+ - **Gluon Scenebuilder**- Layout tool used to design the UI.
 
 ----------
 Acknowledgments 
 -------------------
-- Hat tip to **Almas Baimagambetov** from whom the guidance to use Animation          timer is taken.
-- Theme inspiration from **Game of thrones** - an Epic fantasy TV Series.
+- Hat tip to **[Almas Baimagambetov](https://www.youtube.com/channel/UCmjXvUa36DjqCJ1zktXVbUA)** from whom the guidance to use Animation          timer is taken.
+- Theme inspiration from **[Game of thrones](https://en.wikipedia.org/wiki/Game_of_Thrones)** - an Epic fantasy TV Series.
+- Thanks to [**removebg**](https://www.remove.bg/) for helping me by creating the background  less  png files from jpg  
+- Thanks to **[StackEdit](https://stackedit.io/editor#the-long-night-game)** for helping me make this Readme file in the Markdown format.
 
 
 
@@ -81,3 +88,5 @@ Table of Contents
 -------------------
 
 [TOC]
+
+
