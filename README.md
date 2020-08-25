@@ -37,7 +37,6 @@ but it can be used only limited times and the **dead army(wights)** also has a *
 
 The motive of the game is to **defend Westeros** from the dead army using the knights.
 
-
 [This is the user interface of the game](https://drive.google.com/file/d/107SGAGzmuVCfV3Cuaw6x0rvqkXW2LPxd/view?usp=sharing)
 
 
@@ -47,10 +46,10 @@ Running the Game
 
 The whole project is constitution of 2 java files and two fxml files Running the Main.java runs the game.It can be done through cmd in windows or terminal in linux.
 
-**For Example:**
-Use the following commands to Compile and run the file in cmd. 
+**Running the Main.java file through command line** 
+ 
     
-    java Main.java
+    javac Main.java
     
     java Main
 
@@ -60,6 +59,9 @@ Running the Jar File
 
 Without running the program we can directly run the jar file of the program and  play the game.
 
+**Running the jar file through command line**
+
+    java -jar LambdaSpaceInvaders.jar
 
 ----------
 Built With
