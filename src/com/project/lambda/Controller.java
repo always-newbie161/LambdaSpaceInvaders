@@ -407,12 +407,14 @@ public class Controller implements Initializable {
             }
             allowed = true;
             t = 0;
+            t=0;
         }
     }
 
     public Image createImage(String name) {
         String filepath = "src/Rimages/" + name;
         return (new Image(new File(filepath).toURI().toString()));
+
     }
 
     private void createAlert() {
@@ -436,7 +438,6 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
 
     }
 
