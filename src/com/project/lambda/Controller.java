@@ -62,6 +62,12 @@ public class Controller implements Initializable {
     private Rectangle knightbar;
     @FXML
     private ImageView wdracarys;
+    @FXML
+    private ImageView fire;
+    @FXML
+    private Pane dragpane;
+    @FXML
+    private Rectangle invadebar;
 
 
     public Scene scene;
@@ -77,7 +83,7 @@ public class Controller implements Initializable {
     private double t = 0;
     private int frames = 0;
     private int basedamage = 0;
-    private static DoubleProperty dp;
+    private static DoubleProperty dp,dp2;
     private static final List<Integer> vwights =new ArrayList<>();
     boolean[] vflags = new boolean[4];
     private final Random r = new Random();
@@ -134,8 +140,11 @@ public class Controller implements Initializable {
         setControls();
 
         dp = new SimpleDoubleProperty(1.0);
+        dp2 = new SimpleDoubleProperty(0);
         DoubleBinding bind = fullbar.widthProperty().multiply(dp);
+        DoubleBinding bind2 = fullbar.widthProperty().multiply(dp2);
         knightbar.widthProperty().bind(bind);
+        invadebar.widthProperty().bind(bind2);
         drogon.setOnMouseClicked(e ->dracarys.setVisible(true));
 
         generateVMovers();
@@ -144,7 +153,7 @@ public class Controller implements Initializable {
             @Override
             public void handle(long now) {
                 if (!gameOver) {
-                    intersectionUpdate();
+                    doThisInEveryFrame();
                 } else {
                     mediaPlayer.pause();
                     this.stop();
@@ -156,7 +165,7 @@ public class Controller implements Initializable {
         id=0;
         timer.start();
         level.setText(String.valueOf(clevel));
-        firstLevel();
+        createEnemies();
     }
 
     public void onMusic(String s) {
@@ -169,7 +178,7 @@ public class Controller implements Initializable {
 
     }
 
-    private void firstLevel() {
+    private void createEnemies() {
         Image image2 = createImage("wight.png");
         for (int i = 0; i < 5; i++) {
             warrior e = new warrior(image2, 20, "enemy", 160 + i * 70, 100, 1, 1, "whiteweapon.png");
@@ -193,7 +202,7 @@ public class Controller implements Initializable {
         return ground.getChildren().stream().filter(n -> n.getClass() == Circle.class).map(n -> (Circle) n).collect(Collectors.toList());
     }
 
-    private void intersectionUpdate() {
+    private void doThisInEveryFrame() {
 
         frames++;
         if (frames > 120) {
@@ -220,19 +229,19 @@ public class Controller implements Initializable {
             else
                 l3ig.setVisible(false);
 
-            firstLevel();
+            createEnemies();
             frames = 1;
         }
 
 
         t += 0.016;
 
-        if(wdracarys.isVisible()){
+
             if(wdracarys.getTranslateY()==286) {
                 wdracarys.setVisible(false);
                 wdracarys.setTranslateY(0);
             }
-            else {
+            if(wdracarys.isVisible()){
                 wdracarys.setTranslateY(wdracarys.getTranslateY() + 5);
                 for (pixel p : pixels) {
                     if (wdracarys.getBoundsInParent().intersects(p.getBoundsInParent()) && ground.getChildren().contains(p)) {
@@ -254,14 +263,17 @@ public class Controller implements Initializable {
                         updateSideBar();
                         setControls();
                     }
-                ground.getChildren().remove(wdracarys);
+                    wdracarys.setVisible(false);
                 }
             }
-        }
+
         if(dracarys.isVisible()) {
             if (dracarys.getTranslateY() ==-195) {
                 dracarys.setVisible(false);
                 dracarys.setTranslateY(0);
+                ground.getChildren().remove(dracarys);
+                dragpane.getChildren().remove(fire);
+
             }
 
             else {
@@ -293,7 +305,6 @@ public class Controller implements Initializable {
                         if (i.getBoundsInParent().intersects(enemy.getBoundsInParent())) {
                             ground.getChildren().remove(i);
                             enemy.setLives((enemy.getLives() - i.b_power));
-                            System.out.println(enemy.getLives() + " " + i.b_power);
                             if (enemy.getLives() == 0.5) {
                                 enemy.setImage(createImage("wight2.png"));
                             }
@@ -591,6 +602,7 @@ public class Controller implements Initializable {
             ground.getChildren().remove(i);
             en_pres--;
             basedamage++;
+            dp2.set(dp.get()+Math.min(1-dp.get(),0.2));
             if (basedamage == 5) {
                 createAlert();
                 gameOver = true;
