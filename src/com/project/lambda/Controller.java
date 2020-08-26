@@ -255,7 +255,7 @@ public class Controller implements Initializable {
                     knights.remove(0);
                     dp.set(1);
                     if (knights.isEmpty()) {
-                        createAlert();
+                        createAlert(1);
                         gameOver = true;
 
                     } else {
@@ -341,7 +341,7 @@ public class Controller implements Initializable {
                             knights.remove(0);
                             dp.set(1);
                             if (knights.isEmpty()) {
-                                createAlert();
+                                createAlert(1);
                                 gameOver = true;
 
                             } else {
@@ -428,10 +428,17 @@ public class Controller implements Initializable {
 
     }
 
-    private void createAlert() {
+    private void createAlert(int cause) {
         Alert popup = new Alert(Alert.AlertType.CONFIRMATION);
+        String s = "Your score is " + score;
         popup.setTitle("GameOver!");
-        popup.setHeaderText("Your score is " + score);
+        if(cause==0)
+            popup.setHeaderText("You made it.No wights remaining! \n"+s);
+        else if(cause==1)
+            popup.setHeaderText("All the knights are killed. \n"+s);
+        else
+            popup.setHeaderText("Winterfell is invaded by the deadarmy. \n"+s);
+
         popup.setContentText("Do you want to play again?");
         ButtonType yesBtn = new ButtonType("yes");
         ButtonType noBtn = new ButtonType("no");
@@ -602,9 +609,9 @@ public class Controller implements Initializable {
             ground.getChildren().remove(i);
             en_pres--;
             basedamage++;
-            dp2.set(dp.get()+Math.min(1-dp.get(),0.2));
+            dp2.set(dp2.get()+Math.min(1-dp2.get(),0.2));
             if (basedamage == 5) {
-                createAlert();
+                createAlert(2);
                 gameOver = true;
             }
             else {
@@ -630,7 +637,7 @@ public class Controller implements Initializable {
 
             } else {
                 gameOver = true;
-                createAlert();
+                createAlert(0);
             }
         }
     }

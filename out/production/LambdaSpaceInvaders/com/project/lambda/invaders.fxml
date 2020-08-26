@@ -141,6 +141,13 @@
                   <ImageView fx:id="next" fitHeight="50.0" fitWidth="50.0" layoutX="101.0" layoutY="396.0" pickOnBounds="true" preserveRatio="true" />
                   <Circle fill="#2e2e2e00" layoutX="52.0" layoutY="309.0" radius="31.0" stroke="#e3703b" strokeType="INSIDE" strokeWidth="2.0" />
                   <Circle fill="#2e2e2e00" layoutX="126.0" layoutY="421.0" radius="31.0" stroke="#e3703b" strokeType="INSIDE" strokeWidth="2.0" />
+                  <Label alignment="CENTER" layoutX="28.0" layoutY="175.0" prefHeight="36.0" prefWidth="145.0" text="Invaders:" textFill="#a9eee6">
+                     <font>
+                        <Font name="SansSerif Regular" size="31.0" />
+                     </font>
+                  </Label>
+                  <Rectangle fx:id="fullinvade" arcHeight="5.0" arcWidth="5.0" fill="#e8e5da" height="20.0" layoutX="53.0" layoutY="228.0" stroke="BLACK" strokeType="INSIDE" width="95.0" />
+                  <Rectangle fx:id="invadebar" arcHeight="5.0" arcWidth="5.0" fill="#a9eee6f0" height="20.0" layoutX="53.0" layoutY="228.0" stroke="BLACK" strokeType="INSIDE" width="95.0" />
                </children>
             </Pane>
          </children>
