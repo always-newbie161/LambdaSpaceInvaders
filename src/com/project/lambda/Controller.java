@@ -145,7 +145,10 @@ public class Controller implements Initializable {
         DoubleBinding bind2 = fullbar.widthProperty().multiply(dp2);
         knightbar.widthProperty().bind(bind);
         invadebar.widthProperty().bind(bind2);
-        drogon.setOnMouseClicked(e ->dracarys.setVisible(true));
+        drogon.setOnMouseClicked(e -> {
+            if(ground.getChildren().contains(dracarys))
+            dracarys.setVisible(true);
+        });
 
         generateVMovers();
 
